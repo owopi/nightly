@@ -9,6 +9,7 @@
     <!-- Load CSS and JS -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     
     <!-- Load Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code|Fira+Code:b"> 
@@ -16,9 +17,19 @@
     <!-- Load Charset and set correct viewport -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- jQuery Script for Random Backgrounds Upon Refresh (Hosted on my Tixte File Host) -->
+    <script type="text/javascript">
+        $(function() {
+         var images = ['https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-cloud-shapes.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-planet-001.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-clouds-1k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-crater3.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-escape-hd.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-wings-hd.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-lost-1k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-wait.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-away-1k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-ice1920.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-castle2k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-over-the-city1k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-quiet-1px.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-stardust-1k.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-15step.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/alena-aenami-rooflinesgirl-1k-2.jpg', 'https://us-east-1.tixte.net/uploads/kami.needs.rest/balcony.jpg'];
+         $('#background').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+        });
+    </script>
 </head>
 
+
 <body>
+    <div id="background"></div>
     <div id="apexContainer">
 
         <div id="headingContainer">(⌐■_■)</div>
@@ -26,11 +37,19 @@
         <div id="clockContainer">00:00</div>
         
         <ul id="bookmarksContainer">
+            <!-- DO NOT TOUCH BG1 to BG4 -->
             <div class="bookmark" id="b1"><a href="https://github.com" id="aB1"><img src="assets/github.svg" id="imgB1"></a></div>
-            <div class="bookmark" id="b2"><a href="https://web.whatsapp.com" id="aB2"><img src="assets/whatsapp.svg" id="imgB2"></a></div>
-            <div class="bookmark" id="b3"><a href="https://www.youtube.com" id="aB3"><img src="assets/youtube.svg" id="imgB3"></a></div>
-            <div class="bookmark" id="b4"><a href="https://gmail.com" id="aB4"><img src="assets/gmail.svg" id="imgB4"></a></div>
+            <div class="bookmark" id="b2"><a href="https://www.youtube.com" id="aB2"><img src="assets/youtube.svg" id="imgB2"></a></div>
+            <div class="bookmark" id="b3"><a href="https://drive.google.com/drive/u/1" id="aB3"><img src="assets/google-drive.svg" id="imgB3"></a></div>
+            <div class="bookmark" id="b4"><a href="https://mail.google.com/mail/u/1/" id="aB4"><img src="assets/gmail.svg" id="imgB4"></a></div>
+            <!-- <div class="bookmark" id="b6"><a href="https://classroom.google.com/u/1/" id="aB4"><img src="assets/google-classroom.svg" id="imgB4"></a></div> -->
             <div class="bookmark" id="b5"><img src="assets/settings.svg"></div>
+            <form action = "https://www.google.com/search" method="get" class="search">
+                <input type="text" placeholder="Search for Something" name="q">
+                <button type="submit">
+                    <img src="assets/search.svg" class="icon">
+                </button>
+            </form>
         </ul>
 
         <div id="settingsContainer" style="display: none;">
@@ -68,7 +87,7 @@
             </div>
             
             <div id="generalSettingsContainer" style="display: none;">
-                <div>Background <input type="text" class="inputField" id="generalBackgroundSetting" value="assets/calvin.jpg"></div>
+                <!-- <div>Background <input type="text" class="inputField" id="generalBackgroundSetting" value=""></div> -->
                 <div>Blur Intensity <input type="range" class="inputRange" id="generalBlurIntensitySetting" min="1" max="15" value="5"></div>
             </div>
 

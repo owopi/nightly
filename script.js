@@ -208,28 +208,25 @@ function main() {
     
     body = document.querySelector("body");
     apexContainer = document.querySelector("#apexContainer");
-    generalBackgroundSetting = document.querySelector("#generalBackgroundSetting");
+    // generalBackgroundSetting = document.querySelector("#generalBackgroundSetting");
     generalBlurIntensitySetting = document.querySelector("#generalBlurIntensitySetting");
 
     // load user prefs
-    if (localStorage.getItem("generalBackground") != null) {
-        body.style.backgroundImage = "url(" + localStorage.getItem("generalBackground") + ")";
-        generalBackgroundSetting.value = localStorage.getItem("generalBackground");
-    } else {
-        body.style.backgroundImage = "url('assets/calvin.jpg')";
-        generalBackgroundSetting.value = "assets/calvin.jpg";
-    }
+    //  if (localStorage.getItem("generalBackground") != null) {
+    //      body.style.backgroundImage = "url(" + localStorage.getItem("generalBackground") + ")";
+    //      generalBackgroundSetting.value = localStorage.getItem("generalBackground");
+    // }
     if (localStorage.getItem("generalBlurIntensity") != null) {
         apexContainer.style.backdropFilter = "blur(" + localStorage.getItem("generalBlurIntensity") + "px)";
         generalBlurIntensitySetting.value = localStorage.getItem("generalBlurIntensity");
     }
 
     // make settings work
-    generalBackgroundSetting.oninput = function() {
-        newValue = generalBackgroundSetting.value;
-        body.style.backgroundImage = "url('" + newValue + "')";
-        localStorage.setItem("generalBackground", newValue);
-    }
+    //  generalBackgroundSetting.oninput = function() {
+    //      newValue = generalBackgroundSetting.value;
+    //      body.style.backgroundImage = "url('" + newValue + "')";
+    //      localStorage.setItem("generalBackground", newValue);
+    //  }
     generalBlurIntensitySetting.oninput = function() {
         newValue = generalBlurIntensitySetting.value;
         apexContainer.style.backdropFilter = "blur("+ newValue +"px)";
