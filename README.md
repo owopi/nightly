@@ -4,6 +4,8 @@
 
 A minimal and configurable start page for the web browser of your choice.
 
+#### This is my fork that has my own bookmarks/logos and a Google search bar, along with a random background upon refresh (using jQuery). Images from https://www.artstation.com/aenamiart and hosted on my own Tixte file host (for faster loads)
+
 ## Installation
 
 ### For Chromium-based browsers
@@ -27,7 +29,3 @@ Let's take the example of changing the background :
 
 ..and that's it! The image would have been applied to the background, and it'll stay that way until you clear your browser cache or move the image to another place.
 
-## Preview
-<p align="center">
-<img src="preview.png" width="600">
-</p>
