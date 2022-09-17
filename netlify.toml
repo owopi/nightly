@@ -1,3 +1,2 @@
-[[redirects]]
-  from = "/index.html"
-  to = "/search"
+[build]
+  publish = "."
